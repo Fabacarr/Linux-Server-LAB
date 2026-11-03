@@ -50,6 +50,7 @@ This repository contains practical linux server labs designed to build and docum
 - **DevOps Toolchain** - containers, CI/CD, and observability
 
 ## Repository Structure
+```text
 linux-server-labs/
 |---01-system-administration/
 | |---user-mamangement/
@@ -66,6 +67,7 @@ linux-server-labs/
 |---docs/
 | |---architecture-diagrams/
 |---README.md
+```
 
 ## Getting Started
 Each lab folder contains its own `README.md` with specific prerequisites and steps. General requirements:
