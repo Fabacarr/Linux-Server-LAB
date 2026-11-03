@@ -23,7 +23,7 @@ This repository contains practical linux server labs designed to build and docum
 | Process & Service Management      | Systemd, resource monitoring          | `systemctl`, `top`, `journalctl`          | In Progress       |
 | Storage & LVM                     | Disk partitioning, logic volumes      | `fdisk`, `lvm`, `mount`                   | Planned           |
 | Networking Fundamentals           | Ip config, DNS, firewall basics       | `ip`, `ss`, `ufw`                         | Planned           |
-| Backup & Restore Drill            | incremental syscs, full archives      | `rsync`, `tar`, `cron`                    | Planned           |
+| Backup & Restore Drill            | incremental syncs, full archives      | `rsync`, `tar`, `cron`                    | Planned           |
 | Web Service hosting               | Web services, reverse-proxy, ssl/tls  | `Apache/Nginx`, `certbot`                 | Planned           |
 | Database Server Administration    | MariaDB/PostgreSQL, hardening         | `mysql_secure_installation`,`mysqldump`   | Planned           |
 | Patch Management & Kernel Rollback| Security patches, rollback drill      | `dnf`, `grubby`                           | Planned           |
@@ -31,16 +31,16 @@ This repository contains practical linux server labs designed to build and docum
 ### Devops & Automation
 | Lab                               | Focus                             | Key Tools                         | Status            |
 |-----------------------------------|-----------------------------------|-----------------------------------|-------------------|
-| Bash Automation                   | Idepondent scripts, cron jobs     | Bash, `cron`                      | Planned           |
+| Bash Automation                   | Idepotent scripts, cron jobs     | Bash, `cron`                      | Planned           |
 | Infrastructure as Code            | Server Provisioning               | Ansible / Terraform               | Planned           |
 | Containerization                  | Dockerized services               | Docker, `docker-compose`          | Planned           |
 | CI/CD Pipeline                    | Automated builds & deployments    | GitHub Actions / Jenkins          | Planned           |
 | Monitoring Stack                  | Metrics, dashboards, alerting     | Prometheus, Grafana               | Planned           |
-| Log Aggregation & Aleting         | Centralized logging               | `syslog`, `auth.log`, `ELK stack` | Planned           |
+| Log Aggregation & Alerting         | Centralized logging               | `syslog`, `auth.log`, `ELK stack` | Planned           |
 | Configuration Management at Scale | applying hardening baseline       |  ansible playbook                 | Planned           |
 
 ### Security & Hardening
-| Lab                                           | Focus                                 | Key Tools                             | Planned           |
+| Lab                                           | Focus                                 | Key Tools                             | Status            |
 |-----------------------------------------------|---------------------------------------|---------------------------------------|-------------------|
 | SSH-Hardening                                 | Key-based auth, non-standard ports    | `sshd_config`, `fail2ban`             | Planned           |
 | Firewall Configuration                        | Least-privilege network rules         | `ufw`, `iptables`                     | Planned           |
@@ -51,12 +51,35 @@ This repository contains practical linux server labs designed to build and docum
 | Mandatory Access Control (SELinux/AppArmor)   | MAC frameworks                        | `auditd`, AppArmor profiles, `nginx`  | Planned           |
 | File Integrity Monitoring (FIM)               | Detecting changes                     | wazuh                                 | Planned           |
 
-## Skills Demonstrated
-- **Linux CLI & Shell Scripting** - daily driver for every lab
-- **System Hardening** - applying CIS-style baselines to servers
-- **Infrastructure Automation** - reducing manual toil with scripts and IaC
-- **Security Operations** - log analysis, firewall rules, and audit trails
-- **DevOps Toolchain** - containers, CI/CD, and observability
+##  Skills Demonstrated
+
+### Linux System Administration
+- **Enterprise Linux distributions** — Ubuntu, Debian, RHEL, Rocky Linux, AlmaLinux
+- **Package & patch management** — `dnf`, `yum`, `apt`, security updates, kernel rollback with `grubby`
+- **Storage & filesystems** — LVM, partitioning, ACLs, `fstab`, mount options
+- **Service management** — systemd units, timers, `journalctl`, resource monitoring
+- **Networking** — TCP/IP, DNS (BIND9), DHCP, firewalls (`ufw`, `iptables`, `nftables`)
+- **Web & database services** — Nginx/Apache virtual hosts, reverse proxy, TLS with `certbot`, MariaDB/PostgreSQL hardening and backup
+
+### DevOps & Automation
+- **Configuration management** — Ansible roles, idempotent playbooks, CIS baseline enforcement
+- **Infrastructure as Code** — Terraform provisioning, state management, teardown
+- **Containers** — Docker, Docker Compose, container healthchecks, basic orchestration awareness
+- **CI/CD** — GitHub Actions / Jenkins pipelines, security gates, build-test-deploy flows, rollback strategies
+- **Observability** — Prometheus metrics, Grafana dashboards, centralized logging (Loki/ELK), alerting
+
+### Security & Hardening
+- **SSH & access control** — key-based authentication, `fail2ban`, PAM, MFA/TOTP
+- **Mandatory Access Control** — SELinux policy modules, AppArmor profiles, denial analysis with `ausearch`
+- **Auditing & integrity** — `auditd` rules, AIDE/Wazuh file integrity monitoring, log analysis
+- **Vulnerability management** — `Lynis`, OpenVAS, patch validation, CVE remediation workflows
+- **Defensive operations** — red team vs. blue team drills, incident detection, runbook and postmortem authoring
+
+### Operational & SRE Competencies
+- **Incident response** — diagnosis and recovery from disk-full, inode exhaustion, OOM kills, systemd crashloops
+- **Backup & disaster recovery** — `rsync`, `tar`, database dumps, live restore validation
+- **Documentation** — runbooks, postmortems, reproducible lab narratives
+- **Scripting** — Bash automation, Python for tooling and integration
 
 ## Repository Structure
 ```text
@@ -112,6 +135,6 @@ Each lab folder contains its own `README.md` with specific prerequisites and ste
 - Git for cloning the repository.
 
 ## Security & Ethics
-All security labs are performed in isolated, personally owned environments (local VMs or dedicated lab servers). No techniques are documented against systems without explicit aythorization.
+All security labs are performed in isolated, personally owned environments (local VMs or dedicated lab servers). No techniques are documented against systems without explicit authorization.
 
 
