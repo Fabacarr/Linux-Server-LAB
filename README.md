@@ -126,7 +126,8 @@ Linux-Server-LAB/
 ├── SECURITY.md
 ├── LICENSE
 ├── .gitignore
-└── README.md```
+└── README.md
+```
 
 ## Getting Started
 Each lab folder contains its own `README.md` with specific prerequisites and steps. General requirements:
