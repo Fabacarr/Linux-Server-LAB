@@ -93,8 +93,8 @@ Linux-Server-LAB/
 │   ├── backup-restore-drill/
 │   ├── web-service-hosting-tls/
 │   ├── database-administration/
-│   ├── patch-management-kernel-rollback/   ← from the expanded list
-│   └── incident-response-drills/           ← disk-full, inode, OOM, systemd
+│   ├── patch-management-kernel-rollback/   
+│   └── incident-response-drills/       
 │
 ├── 02-devops-automation/
 │   ├── bash-automation/
@@ -103,7 +103,7 @@ Linux-Server-LAB/
 │   ├── ci-cd-pipeline-security-gates/
 │   ├── monitoring-stack/
 │   ├── centralized-logging-alerting/
-│   └── idempotent-cis-hardening/           ← Ansible run twice, changed=0
+│   └── idempotent-cis-hardening/           
 │
 ├── 03-security-hardening/
 │   ├── ssh-hardening/
@@ -121,7 +121,7 @@ Linux-Server-LAB/
 │   └── lab-readme-template.md
 │
 ├── .github/
-│   └── workflows/                          ← optional, for CI later
+│   └── workflows/                          
 │
 ├── SECURITY.md
 ├── LICENSE
