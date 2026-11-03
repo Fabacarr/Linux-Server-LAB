@@ -11,27 +11,32 @@
 - [Security & Ethics](#-security--ethics)
 
 ## About the lab
-This repository contains practical linux server labs designed to build and document real-world administration, automation, and defensive security skills. Each lab is self-contained, includes setup instructions, and captures the problem, approach, validation steps.
+This repository contains practical linux server labs designed to build and document real-world administration, automation, and defensive security skills. Each lab is designed as a self-contained scenario, simulating a real operational task from diagnosis and implementation to validation and documentation (runbooks/postmortems).
 
 ## Lab Modules
 
 ### System Administration
-| Lab                           | Focus                             | Key Tools                         |
-|-------------------------------|-----------------------------------|-----------------------------------|
-| User & Group Management       | Access control, sudo policies     | `useradd`, `visudo`               |
-| File System & Permissions     | ACLs, ownership, hardening        | `chmod`, `chown`, `setfacl`       |
-| Process & Service Management  | Systemd, resource monitoring      | `systemctl`, `top`, `journalctl`  |
-| Storage & LVM                 | Disk partitioning, logic volumes  | `fdisk`, `lvm`, `mount`           |
-| Networking Fundamentals       | Ip config, DNS, firewall basics   | `ip`, `ss`, `ufw`                 |
+| Lab                           | Focus                                 | Key Tools                                 |
+|-------------------------------|---------------------------------------|-------------------------------------------|
+| User & Group Management       | Access control, sudo policies         | `useradd`, `visudo`                       |
+| File System & Permissions     | ACLs, ownership, hardening            | `chmod`, `chown`, `setfacl`               |
+| Process & Service Management  | Systemd, resource monitoring          | `systemctl`, `top`, `journalctl`          |
+| Storage & LVM                 | Disk partitioning, logic volumes      | `fdisk`, `lvm`, `mount`                   |
+| Networking Fundamentals       | Ip config, DNS, firewall basics       | `ip`, `ss`, `ufw`                         |
+| Backup & Restore Drill        | incremental syscs, full archives      | `rsync`, `tar`, `cron`                    |
+| Web Service hosting           | Web services, reverse-proxy, ssl/tls  | `Apache/Nginx`, `certbot`                 |
+| Database Server Administration| MariaDB/PostgreSQL, hardening         | `mysql_secure_installation`,`mysqldump`   |
 
 ### Devops & Automation
 | Lab                       | Focus                             | Key Tools                 |
 |---------------------------|-----------------------------------|---------------------------|
-| Bash Automation           | Idepondeny scripts, cron jobs     | Bash, `cron`              |
+| Bash Automation           | Idepondent scripts, cron jobs     | Bash, `cron`              |
 | Infrastructure as Code    | Server Provisioning               | Ansible / Terraform       |
 | Containerization          | Dockerized services               | Docker, `docker-compose`  |
 | CI/CD Pipeline            | Automated builds & deployments    | GitHub Actions / Jenkins  |
 | Monitoring Stack          | Metrics, dashboards, alerting     | Prometheus, Grafana       |
+| Log Aggregation & Aleting     | Centralized logging                   | `syslog`, `auth.log`, `ELK stack`         |
+Configuration Management at Scale | applying hardening baseline | `ansible playbook` |
 
 ### Security & Hardening
 | Lab                       | Focus                                 | Key Tools                 |
@@ -41,11 +46,14 @@ This repository contains practical linux server labs designed to build and docum
 | System Auditing           | Log analysis, intrusion detection     | `auditd`, `rsyslog`       |
 | Vulnerability Scanning    | Local security assessment             | `Lynis`, `OpenVAS`        |
 | Centralized Logging       | Security event correlation            | `rsyslog`, `Splunk`       |
+| Red Team vs. Blue Team Simulation | bruteforcing, hardening | `nmap`, `hydra`, `fail2ban`, `ufw` |
+| Mandatory Access Control (SELinux/AppArmor) | MAC frameworks | `auditd`, `AppArmor profiles`, `nginx` |
+| File Integrity Monitoring (FIM) | Detecting changes | `wazuh` |
 
 ## Skills Demonstrated
 - **Linux CLI & Shell Scripting** - daily driver for every lab
 - **System Hardening** - applying CIS-style baselines to servers
-- **Infrastructure Automation** - reducing manual toil with scrips and IaC
+- **Infrastructure Automation** - reducing manual toil with scripts and IaC
 - **Security Operations** - log analysis, firewall rules, and audit trails
 - **DevOps Toolchain** - containers, CI/CD, and observability
 
@@ -53,19 +61,21 @@ This repository contains practical linux server labs designed to build and docum
 ```text
 linux-server-labs/
 |---01-system-administration/
-|       |---user-mamangement/
+|       |---user-manangement/
 |       |---file-permissions/
-|       |---lvm-storage/
+|       |---production-incident-response-drills/
+|       |---backup-&-restore drill/
+|       |---web-service-hosting-&-hardening/
 |---02-devops-automation/
 |       |---bash-scripting/
-|       |----ansible-provisioning/
-|       |----docker-services/
+|       |---ansible-provisioning/
+|       |---docker-services/
 |---03-security-hardening/
-|       |----ssh-hardening/
-|       |----firewall-rules/
-|       |----log-auditing/
+|       |---ssh-hardening/
+|       |---firewall-rules/
+|       |---log-auditing/
 |---docs/
-|       |----architecture-diagrams/
+|       |---architecture-diagrams/
 |---README.md
 ```
 
