@@ -53,19 +53,19 @@ This repository contains practical linux server labs designed to build and docum
 ```text
 linux-server-labs/
 |---01-system-administration/
-| |---user-mamangement/
-| |---file-permissions/
-| |---lvm-storage/
+|       |---user-mamangement/
+|       |---file-permissions/
+|       |---lvm-storage/
 |---02-devops-automation/
-| |---bash-scripting/
-| |---ansible-provisioning/
-| |---docker-services/
+|       |---bash-scripting/
+|       |----ansible-provisioning/
+|       |----docker-services/
 |---03-security-hardening/
-| |---ssh-hardening/
-| |---firewall-rules/
-| |---log-auditing/
+|       |----ssh-hardening/
+|       |----firewall-rules/
+|       |----log-auditing/
 |---docs/
-| |---architecture-diagrams/
+|       |----architecture-diagrams/
 |---README.md
 ```
 
