@@ -1,5 +1,10 @@
 # Lab [NN] — [Short Descriptive Title]
 
+# Lab — Patch Management & Kernel Rollback
+
+> **Status:** 🚧 In Progress  
+> **Last updated:** 2026-11-03
+
 ## 📖 Overview
 One paragraph describing the operational scenario. What system, what risk, what outcome?
 Example: "A production web server is running an outdated kernel with a known CVE. This lab applies security patches during a maintenance window and validates rollback in case the new kernel breaks the application."

@@ -16,39 +16,40 @@ This repository contains practical linux server labs designed to build and docum
 ## Lab Modules
 
 ### System Administration
-| Lab                           | Focus                                 | Key Tools                                 |
-|-------------------------------|---------------------------------------|-------------------------------------------|
-| User & Group Management       | Access control, sudo policies         | `useradd`, `visudo`                       |
-| File System & Permissions     | ACLs, ownership, hardening            | `chmod`, `chown`, `setfacl`               |
-| Process & Service Management  | Systemd, resource monitoring          | `systemctl`, `top`, `journalctl`          |
-| Storage & LVM                 | Disk partitioning, logic volumes      | `fdisk`, `lvm`, `mount`                   |
-| Networking Fundamentals       | Ip config, DNS, firewall basics       | `ip`, `ss`, `ufw`                         |
-| Backup & Restore Drill        | incremental syscs, full archives      | `rsync`, `tar`, `cron`                    |
-| Web Service hosting           | Web services, reverse-proxy, ssl/tls  | `Apache/Nginx`, `certbot`                 |
-| Database Server Administration| MariaDB/PostgreSQL, hardening         | `mysql_secure_installation`,`mysqldump`   |
+| Lab                               | Focus                                 | Key Tools                                 | Status            |
+|-----------------------------------|---------------------------------------|-------------------------------------------|-------------------|
+| User & Group Management           | Access control, sudo policies         | `useradd`, `visudo`                       | In Progress       |
+| File System & Permissions         | ACLs, ownership, hardening            | `chmod`, `chown`, `setfacl`               | In Progress       |
+| Process & Service Management      | Systemd, resource monitoring          | `systemctl`, `top`, `journalctl`          | In Progress       |
+| Storage & LVM                     | Disk partitioning, logic volumes      | `fdisk`, `lvm`, `mount`                   | Planned           |
+| Networking Fundamentals           | Ip config, DNS, firewall basics       | `ip`, `ss`, `ufw`                         | Planned           |
+| Backup & Restore Drill            | incremental syscs, full archives      | `rsync`, `tar`, `cron`                    | Planned           |
+| Web Service hosting               | Web services, reverse-proxy, ssl/tls  | `Apache/Nginx`, `certbot`                 | Planned           |
+| Database Server Administration    | MariaDB/PostgreSQL, hardening         | `mysql_secure_installation`,`mysqldump`   | Planned           |
+| Patch Management & Kernel Rollback| Security patches, rollback drill      | `dnf`, `grubby`                           | Planned           |
 
 ### Devops & Automation
-| Lab                       | Focus                             | Key Tools                 |
-|---------------------------|-----------------------------------|---------------------------|
-| Bash Automation           | Idepondent scripts, cron jobs     | Bash, `cron`              |
-| Infrastructure as Code    | Server Provisioning               | Ansible / Terraform       |
-| Containerization          | Dockerized services               | Docker, `docker-compose`  |
-| CI/CD Pipeline            | Automated builds & deployments    | GitHub Actions / Jenkins  |
-| Monitoring Stack          | Metrics, dashboards, alerting     | Prometheus, Grafana       |
-| Log Aggregation & Aleting     | Centralized logging                   | `syslog`, `auth.log`, `ELK stack`         |
-Configuration Management at Scale | applying hardening baseline | `ansible playbook` |
+| Lab                               | Focus                             | Key Tools                         | Status            |
+|-----------------------------------|-----------------------------------|-----------------------------------|-------------------|
+| Bash Automation                   | Idepondent scripts, cron jobs     | Bash, `cron`                      | Planned           |
+| Infrastructure as Code            | Server Provisioning               | Ansible / Terraform               | Planned           |
+| Containerization                  | Dockerized services               | Docker, `docker-compose`          | Planned           |
+| CI/CD Pipeline                    | Automated builds & deployments    | GitHub Actions / Jenkins          | Planned           |
+| Monitoring Stack                  | Metrics, dashboards, alerting     | Prometheus, Grafana               | Planned           |
+| Log Aggregation & Aleting         | Centralized logging               | `syslog`, `auth.log`, `ELK stack` | Planned           |
+| Configuration Management at Scale | applying hardening baseline       |  ansible playbook                 | Planned           |
 
 ### Security & Hardening
-| Lab                       | Focus                                 | Key Tools                 |
-|---------------------------|---------------------------------------|---------------------------|
-| SSH-Hardening             | Key-based auth, non-standard ports    | `sshd_config`, `fail2ban` |
-| Firewall Configuration    | Least-privilege network rules         | `ufw`, `iptables`         |
-| System Auditing           | Log analysis, intrusion detection     | `auditd`, `rsyslog`       |
-| Vulnerability Scanning    | Local security assessment             | `Lynis`, `OpenVAS`        |
-| Centralized Logging       | Security event correlation            | `rsyslog`, `Splunk`       |
-| Red Team vs. Blue Team Simulation | bruteforcing, hardening | `nmap`, `hydra`, `fail2ban`, `ufw` |
-| Mandatory Access Control (SELinux/AppArmor) | MAC frameworks | `auditd`, `AppArmor profiles`, `nginx` |
-| File Integrity Monitoring (FIM) | Detecting changes | `wazuh` |
+| Lab                                           | Focus                                 | Key Tools                             | Planned           |
+|-----------------------------------------------|---------------------------------------|---------------------------------------|-------------------|
+| SSH-Hardening                                 | Key-based auth, non-standard ports    | `sshd_config`, `fail2ban`             | Planned           |
+| Firewall Configuration                        | Least-privilege network rules         | `ufw`, `iptables`                     | Planned           |
+| System Auditing                               | Log analysis, intrusion detection     | `auditd`, `rsyslog`                   | Planned           |
+| Vulnerability Scanning                        | Local security assessment             | `Lynis`, `OpenVAS`                    | Planned           |
+| Centralized Logging                           | Security event correlation            | `rsyslog`,    Splunk                  | Planned           |
+| Red Team vs. Blue Team Simulation             | bruteforcing, hardening               | `nmap`, `hydra`, `fail2ban`, `ufw`    | Planned           |
+| Mandatory Access Control (SELinux/AppArmor)   | MAC frameworks                        | `auditd`, AppArmor profiles, `nginx`  | Planned           |
+| File Integrity Monitoring (FIM)               | Detecting changes                     | wazuh                                 | Planned           |
 
 ## Skills Demonstrated
 - **Linux CLI & Shell Scripting** - daily driver for every lab
@@ -59,25 +60,50 @@ Configuration Management at Scale | applying hardening baseline | `ansible playb
 
 ## Repository Structure
 ```text
-linux-server-labs/
-|---01-system-administration/
-|       |---user-manangement/
-|       |---file-permissions/
-|       |---production-incident-response-drills/
-|       |---backup-&-restore drill/
-|       |---web-service-hosting-&-hardening/
-|---02-devops-automation/
-|       |---bash-scripting/
-|       |---ansible-provisioning/
-|       |---docker-services/
-|---03-security-hardening/
-|       |---ssh-hardening/
-|       |---firewall-rules/
-|       |---log-auditing/
-|---docs/
-|       |---architecture-diagrams/
-|---README.md
-```
+Linux-Server-LAB/
+├── 01-system-administration/
+│   ├── user-management/
+│   ├── file-permissions-acls/
+│   ├── process-service-management/
+│   ├── storage-lvm/
+│   ├── networking-fundamentals/
+│   ├── backup-restore-drill/
+│   ├── web-service-hosting-tls/
+│   ├── database-administration/
+│   ├── patch-management-kernel-rollback/   ← from the expanded list
+│   └── incident-response-drills/           ← disk-full, inode, OOM, systemd
+│
+├── 02-devops-automation/
+│   ├── bash-automation/
+│   ├── ansible-provisioning/
+│   ├── docker-services/
+│   ├── ci-cd-pipeline-security-gates/
+│   ├── monitoring-stack/
+│   ├── centralized-logging-alerting/
+│   └── idempotent-cis-hardening/           ← Ansible run twice, changed=0
+│
+├── 03-security-hardening/
+│   ├── ssh-hardening/
+│   ├── firewall-configuration/
+│   ├── system-auditing-auditd/
+│   ├── vulnerability-scanning/
+│   ├── selinux-apparmor-confinement/
+│   ├── file-integrity-monitoring/
+│   └── red-team-blue-team-drill/
+│
+├── docs/
+│   ├── architecture-diagrams/
+│   ├── runbook-template.md
+│   ├── postmortem-template.md
+│   └── lab-readme-template.md
+│
+├── .github/
+│   └── workflows/                          ← optional, for CI later
+│
+├── SECURITY.md
+├── LICENSE
+├── .gitignore
+└── README.md```
 
 ## Getting Started
 Each lab folder contains its own `README.md` with specific prerequisites and steps. General requirements:
